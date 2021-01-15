@@ -13,75 +13,11 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-
-      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: <Widget>[
-            searchBox(),
-            SizedBox(height: 40,),
-            Container(
-              padding: EdgeInsets.all(20),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20)
-                ),
-                color: Colors.white10
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text("For you", style: TextStyle(
-                    color: Colors.white30,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold
-                  ),),
-                  SizedBox(height: 20,),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border(bottom: BorderSide(
-                        color: Colors.lightBlueAccent
-                      ))
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Recommanded', style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15
-                            ),),
-                            Container(
-                              width: 50,
-                              padding: EdgeInsets.only(bottom: 10),
-                              decoration: BoxDecoration(
-                                border: Border(bottom: BorderSide(
-                                  color: Colors.orange,
-                                  width: 3
-                                ))
-                              ),
-                            )
-                          ],
-                        ),
-                        SizedBox(width: 20,),
-                        Text('Likes', style: TextStyle(
-                          color: Colors.greenAccent,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15
-                        ),)
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
+
           ],
         ),
       ),
@@ -175,4 +111,5 @@ class _HomePageState extends State<HomePage>
       ),
     );
   }
+
 }
