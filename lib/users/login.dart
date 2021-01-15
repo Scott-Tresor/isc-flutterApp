@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ui/home.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -64,7 +65,9 @@ class LoginPage extends StatelessWidget {
                             )
                         ),
                         child: MaterialButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                          },
                           minWidth: double.infinity,
                           height: 47.5,
                           color: Colors.greenAccent,
@@ -88,7 +91,7 @@ class LoginPage extends StatelessWidget {
                       Text('Je ne pas un compte? '),
                       Text('S inscrire', style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          fontSize: 16
+                          fontSize: 16,
                       ),)
                     ],
                   )

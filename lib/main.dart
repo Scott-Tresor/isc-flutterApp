@@ -6,7 +6,7 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SingUpPage(),
+      home: SplashScreen(),
     )
   );
 }
@@ -51,8 +51,12 @@ class SplashScreen extends StatelessWidget {
               ),
               Column(
                 children: <Widget>[
+
                   MaterialButton(
-                    onPressed: (){},
+                    animationDuration: Duration(milliseconds: 1000),
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                    },
                     minWidth: double.infinity,
                     height: 45,
                     shape: RoundedRectangleBorder(
@@ -62,7 +66,7 @@ class SplashScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50)
                     ),
                     child: Text(
-                      'Inscription',
+                      'Connexion',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18
@@ -82,7 +86,10 @@ class SplashScreen extends StatelessWidget {
                       )
                     ),
                     child: MaterialButton(
-                      onPressed: (){},
+                      animationDuration: Duration(milliseconds: 1000),
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SingUpPage()));
+                      },
                       minWidth: double.infinity,
                       height: 47.5,
                       color: Colors.yellow,
@@ -94,7 +101,7 @@ class SplashScreen extends StatelessWidget {
                         'Inscription',
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
-                            fontSize: 18
+                            fontSize: 18,
                         ),
                       ),
                     ),
