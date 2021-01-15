@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/users/login.dart';
+import 'package:flutter_app/users/singup.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: SingUpPage(),
     )
   );
 }
@@ -60,7 +62,7 @@ class SplashScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50)
                     ),
                     child: Text(
-                      'Connexion',
+                      'Inscription',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18
