@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage>
           BottomNavyBarItem(
               icon: Icon(Icons.unsubscribe_rounded),
               title: Text('Inscription'),
-              activeColor: Colors.deepOrangeAccent,
+              activeColor: Colors.pinkAccent,
               inactiveColor: Colors.black
           ),
           BottomNavyBarItem(
