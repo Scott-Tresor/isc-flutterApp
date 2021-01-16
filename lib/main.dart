@@ -51,7 +51,6 @@ class SplashScreen extends StatelessWidget {
               ),
               Column(
                 children: <Widget>[
-
                   MaterialButton(
                     animationDuration: Duration(milliseconds: 1000),
                     onPressed: (){
