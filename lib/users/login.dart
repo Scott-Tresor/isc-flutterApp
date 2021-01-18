@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ui/FadeAnimation.dart';
 import 'package:flutter_app/ui/home.dart';
 
 class LoginPage extends StatelessWidget {
@@ -31,29 +32,34 @@ class LoginPage extends StatelessWidget {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                      Text('Connexion', style: TextStyle(
+                      FadeAnimation(1.2,
+                        Text('Connexion', style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold
-                      ),),
+                      ),),),
                       SizedBox(height: 15,),
-                      Text('Connexion avec votre compte', style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.grey[700]
-                      ),)
+                      FadeAnimation(1.3,
+                          Text('Connexion avec votre compte', style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey[700]
+                          ),)
+                      )
                     ],
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40),
-                    child: Column(
-                      children: <Widget>[
-                        makeInput(label: "Email"),
-                        makeInput(label: "Password", obscurText: true)
-                      ],
-                    ),
+                    child: FadeAnimation(1.5,
+                      Column(
+                        children: <Widget>[
+                          makeInput(label: "Email"),
+                          makeInput(label: "Password", obscurText: true)
+                        ],
+                      ),
+                    )
                   ),
                   Padding(
                       padding: EdgeInsets.symmetric(horizontal: 40),
-                      child: Container(
+                      child: FadeAnimation(1.6,  Container(
                         padding: EdgeInsets.only(top: 0, bottom: 0),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
@@ -84,7 +90,8 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                       )
-                  ),
+                  ),),
+                  FadeAnimation(1.6,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -94,18 +101,20 @@ class LoginPage extends StatelessWidget {
                           fontSize: 16,
                       ),)
                     ],
-                  )
+                  ))
                 ],
               ),
             ),
-            Container(
-              height: MediaQuery.of(context).size.height / 3,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(''),
-                  fit: BoxFit.cover
+            FadeAnimation(1.8,
+                Container(
+                  height: MediaQuery.of(context).size.height / 4,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/image1.png'),
+                          fit: BoxFit.cover
+                      )
+                  ),
                 )
-              ),
             )
           ],
         ),
