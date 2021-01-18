@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ui/FadeAnimation.dart';
 import 'package:flutter_app/ui/home.dart';
 
 class SingUpPage extends StatelessWidget {
@@ -32,17 +33,20 @@ class SingUpPage extends StatelessWidget {
                     children: <Widget>[
                       Column(
                         children: <Widget>[
+                          FadeAnimation(1.2,
                           Text('Inscription', style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.bold
-                          ),),
+                          ),)),
                           SizedBox(height: 8,),
+                          FadeAnimation(1.4,
                           Text('Crée votre compte', style: TextStyle(
                               fontSize: 13,
                               color: Colors.grey[700]
-                          ),)
+                          ),))
                         ],
                       ),
+                      FadeAnimation(1.5,
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 40),
                         child: Column(
@@ -53,7 +57,8 @@ class SingUpPage extends StatelessWidget {
                             makeInput(label: "Password", obscurText: true)
                           ],
                         ),
-                      ),
+                      ),),
+                      FadeAnimation(1.6,
                       Padding(
                           padding: EdgeInsets.symmetric(horizontal: 40),
                           child: Container(
@@ -87,7 +92,8 @@ class SingUpPage extends StatelessWidget {
                               ),
                             ),
                           )
-                      ),
+                      ),),
+                      FadeAnimation(1.7,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -97,7 +103,7 @@ class SingUpPage extends StatelessWidget {
                               fontSize: 15
                           ),)
                         ],
-                      )
+                      ))
                     ],
                   ),
                 ),
