@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/onboard/data.dart';
+import 'package:flutter_app/ui/FadeAnimation.dart';
 import 'package:flutter_app/users/login.dart';
 
 class HomePageScreen extends StatelessWidget {
@@ -22,21 +22,28 @@ class HomePageScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
+                    FadeAnimation(1.5,
                     FlatButton(
-                        onPressed: null,
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                        },
                         child: Text('SKIPE', style: Theme.of(context).textTheme.headline5,)
-                    ),
+                    ),)
                   ],
                 ),
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  child: Image.asset(io.image),
+                FadeAnimation(1.5,
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: Image.asset(io.image),
+                  ),
                 ),
                 Column(
                   children: <Widget>[
-                    Text(io.title, style: Theme.of(context).textTheme.headline1,),
+                    FadeAnimation(1.6,
+                    Text(io.title, style: Theme.of(context).textTheme.headline1,)),
                     SizedBox(height: 20,),
-                    Text(io.subtitle, style: Theme.of(context).textTheme.bodyText1,),
+                    FadeAnimation(1.7,
+                    Text(io.subtitle, style: Theme.of(context).textTheme.bodyText1,),),
                     SizedBox(height: 40,),
                     index == (OnBoardingItems.loadOnBoardingItem().length - 1) ?
                     MaterialButton(
@@ -46,9 +53,11 @@ class HomePageScreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text('Get Started', style:  Theme.of(context).textTheme.bodyText2,),
+                          FadeAnimation(1.8,
+                          Text('Get Started', style:  Theme.of(context).textTheme.bodyText2,),),
                           SizedBox(width: 10,),
-                          Icon(Icons.arrow_forward_outlined, color: Colors.white,)
+                        FadeAnimation(1.8,
+                          Icon(Icons.arrow_forward_outlined, color: Colors.white,))
                         ],
                       ),
                     )
@@ -66,7 +75,7 @@ class HomePageScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(2.0),
                           child: Container(
                             width: index == i ? 40: 20,
-                            color: index == 1 ? Colors.white70 : Colors.white30,
+                            color: index == 1 ? Colors.white : Colors.white30,
                           ),
                         );
                       },

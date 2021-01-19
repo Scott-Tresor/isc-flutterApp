@@ -20,26 +20,26 @@ class OnBoardingItems {
       OnBoardingItem(
         title: "Departement d'informatique",
         subtitle: "Nous organisons le departement informatique",
-        image: "asstes/onboard/image1.png",
+        image: "assets/onboard/image4.png",
         color: Colors.green
       ),
       OnBoardingItem(
           title: "Departement de SCOFI",
           subtitle: "Nous organisons le departement des sciences commerciales et financieres",
-          image: "asstes/onboard/image2.png",
-          color: Colors.blue
+          image: "assets/onboard/image2.png",
+          color: Colors.blueAccent
       ),
       OnBoardingItem(
           title: "Departement Douane de  accise",
           subtitle: "Nous organisons le departement de Douane et accisse",
-          image: "asstes/onboard/image3.png",
-          color: Colors.orange
+          image: "assets/onboard/image3.png",
+          color: Colors.redAccent
       ),
       OnBoardingItem(
           title: "Departement de Banque",
           subtitle: "Nous organisons le departement de  Banque et Assurance",
-          image: "asstes/onboard/image4.png",
-          color: Colors.pinkAccent
+          image: "assets/onboard/image1.png",
+          color: Colors.cyan
       ),
     ];
     return fi;

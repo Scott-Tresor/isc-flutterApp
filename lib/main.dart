@@ -19,12 +19,12 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
           headline1: TextStyle(
-            fontSize: 40.0,
+            fontSize: 38.0,
             fontWeight: FontWeight.bold,
             color: Colors.white
           ),
           headline5: TextStyle(
-            fontSize: 14.0,
+            fontSize: 15.0,
             fontWeight: FontWeight.bold,
             color: Colors.white60
           ),
