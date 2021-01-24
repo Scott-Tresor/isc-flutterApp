@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/ui/FadeAnimation.dart';
 
-void main() {
-  runApp(
-    MyApp()
-  );
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -45,9 +41,9 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              FadeAnimation(1,
+              FadeAnimation(1.2,
                 Text("Bienvenu sur l'application officiel de l'institut  superieur de commerce",
-                  style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold, height: 1.0),
+                  style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold, height: 1.2),
                 )
               ),
               SizedBox(height: 30,),
@@ -56,10 +52,30 @@ class Home extends StatelessWidget {
                   style: TextStyle(color: Colors.white.withOpacity(.7), fontSize: 23, fontWeight: FontWeight.w500),
                 )
               ),
-              SizedBox(height: 150,),
-              InkWell(
+              SizedBox(height: 130,),
+              FadeAnimation(1.5,
+                InkWell(
                 onTap: (){},
-              )
+                child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.yellow[700]
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text(
+                        "Demarer",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      Icon(Icons.arrow_forward, color: Colors.white,)
+                    ],
+                  ),
+                ),
+              ),
+              ),
+              SizedBox(height: 20,)
             ],
           ),
         ),
