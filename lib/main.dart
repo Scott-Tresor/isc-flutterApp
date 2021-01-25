@@ -42,13 +42,13 @@ class Home extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               FadeAnimation(1.2,
-                Text("Bienvenu sur l'application officiel de l'institut  superieur de commerce",
+                Text("Bienvenu sur l'application officiel de l'institut  supérieur de commerce",
                   style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold, height: 1.2),
                 )
               ),
               SizedBox(height: 30,),
               FadeAnimation(1.3,
-                Text("Une application de gestion des etudiants",
+                Text("Une application de géstion des étudiants",
                   style: TextStyle(color: Colors.white.withOpacity(.7), fontSize: 23, fontWeight: FontWeight.w500),
                 )
               ),
@@ -66,7 +66,7 @@ class Home extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       Text(
-                        "Demarer",
+                        "Démarer",
                         style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                       Icon(Icons.arrow_forward, color: Colors.white,)
